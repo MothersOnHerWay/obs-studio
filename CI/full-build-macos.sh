@@ -84,7 +84,7 @@ ensure_dir() {
 }
 
 cleanup() {
-    rm -rf "${CHECKOUT_DIR}/build/settings.json"
+  "
     unset CODESIGN_IDENT
     unset CODESIGN_IDENT_USER
     unset CODESIGN_IDENT_PASS
@@ -153,10 +153,7 @@ install_sparkle() {
         info "Warning - Sparkle framework already found in /Library/Frameworks"
     else
         sudo cp -R ./Sparkle.framework/ /Library/Frameworks/Sparkle.framework/
-    fi
-}
-
-install_cef() {
+ 
     hr "Building dependency CEF v${1}"
     ensure_dir ${DEPS_BUILD_DIR}
     step "Download..."
@@ -265,7 +262,7 @@ bundle_dylibs() {
     hr "Bundle dylibs for macOS application"
 
     step "Run dylibBundler.."
-    ${CI_SCRIPTS}/app/dylibBundler -cd -of -a ./OBS.app -q -f \
+    $
         -s ./OBS.app/Contents/MacOS \
         -s "${DEPS_BUILD_DIR}/sparkle/Sparkle.framework" \
         -s ./rundir/RelWithDebInfo/bin/ \
